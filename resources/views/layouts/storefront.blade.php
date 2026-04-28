@@ -15,6 +15,8 @@
                     @auth
                         @if (auth()->user()->role === 'admin')
                             <a href="{{ route('admin.dashboard') }}" class="text-body">Admin</a>
+                        @else
+                            <a href="{{ route('account.orders.index') }}" class="text-body">Pesanan Saya</a>
                         @endif
                         <span class="text-body-secondary small">Halo, {{ auth()->user()->name }}</span>
                         <form method="POST" action="{{ route('logout') }}" class="d-inline">

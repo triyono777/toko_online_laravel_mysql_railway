@@ -44,34 +44,34 @@ Dokumen ini merangkum task implementasi berdasarkan PRD dan status project Larav
 - [x] Halaman beranda toko
 - [x] Halaman katalog produk
 - [x] Halaman detail produk
-- [x] Halaman keranjang sebagai placeholder
-- [ ] Implementasi tambah ke keranjang
-- [ ] Implementasi update quantity keranjang
-- [ ] Implementasi hapus item keranjang
+- [x] Halaman keranjang storefront
+- [x] Implementasi tambah ke keranjang
+- [x] Implementasi update quantity keranjang
+- [x] Implementasi hapus item keranjang
 - [ ] Implementasi pencarian yang lebih lengkap
 - [ ] Implementasi filter kategori, harga, dan stok
 - [ ] Implementasi sort produk
-- [ ] Tambah halaman riwayat pesanan pelanggan
-- [ ] Tambah halaman detail pesanan pelanggan
+- [x] Tambah halaman riwayat pesanan pelanggan
+- [x] Tambah halaman detail pesanan pelanggan
 
 ## 5. Checkout dan Order Flow
 
-- [ ] Implementasi checkout form
-- [ ] Implementasi alamat pengiriman pelanggan
-- [ ] Validasi stok saat checkout
-- [ ] Generate `order_number` otomatis
-- [ ] Simpan snapshot item ke `order_items`
-- [ ] Hitung subtotal, diskon, ongkir, dan grand total
-- [ ] Simpan order ke database dari flow checkout
-- [ ] Redirect ke halaman sukses checkout
+- [x] Implementasi checkout form
+- [x] Implementasi alamat pengiriman pelanggan
+- [x] Validasi stok saat checkout
+- [x] Generate `order_number` otomatis
+- [x] Simpan snapshot item ke `order_items`
+- [x] Hitung subtotal, diskon, ongkir, dan grand total
+- [x] Simpan order ke database dari flow checkout
+- [x] Redirect ke halaman sukses checkout
 
 ## 6. Pembayaran dan Pengiriman
 
-- [ ] Tambah pilihan metode pembayaran
+- [x] Tambah pilihan metode pembayaran
 - [ ] Integrasi payment gateway
 - [ ] Simpan `transaction_reference`
 - [ ] Update `payment_status` dari callback/webhook
-- [ ] Tambah pilihan kurir dan layanan pengiriman
+- [x] Tambah pilihan kurir dan layanan pengiriman
 - [ ] Simpan data shipment dan nomor resi
 - [ ] Update `shipping_status`
 
@@ -82,7 +82,7 @@ Dokumen ini merangkum task implementasi berdasarkan PRD dan status project Larav
 - [x] Implementasi logout customer
 - [x] Implementasi reset password
 - [x] Implementasi login admin
-- [ ] Pisahkan middleware admin dan customer
+- [x] Pisahkan middleware admin dan customer
 - [x] Lindungi route admin
 - [x] Batasi akses CRUD hanya untuk admin
 
@@ -110,7 +110,8 @@ Dokumen ini merangkum task implementasi berdasarkan PRD dan status project Larav
 - [ ] Tambah empty state yang lebih baik
 - [x] Tambah flash message sukses/gagal
 - [ ] Tambah pagination pada listing admin dan katalog
-- [ ] Optimasi mobile layout untuk checkout dan admin
+- [x] Optimasi mobile layout dasar untuk checkout dan cart
+- [ ] Optimasi mobile layout lanjutan untuk admin
 
 ## 10. Sistem dan Integrasi
 
@@ -125,9 +126,9 @@ Dokumen ini merangkum task implementasi berdasarkan PRD dan status project Larav
 ## 11. Testing
 
 - [x] Smoke test default Laravel lulus
-- [ ] Tambah feature test storefront
+- [x] Tambah feature test storefront
 - [x] Tambah feature test admin
-- [ ] Tambah test checkout
+- [x] Tambah test checkout
 - [ ] Tambah test migration/schema penting
 - [x] Tambah test otorisasi admin/customer
 
@@ -141,8 +142,8 @@ Dokumen ini merangkum task implementasi berdasarkan PRD dan status project Larav
 
 ## 13. Prioritas Berikutnya
 
-1. Implementasi autentikasi admin dan customer.
-2. Implementasi keranjang yang benar-benar tersimpan.
-3. Implementasi checkout sampai order tercatat di database.
-4. Implementasi CRUD kategori dan produk di admin.
-5. Integrasi pembayaran dan pembaruan status order.
+1. Implementasi CRUD kategori dan produk di admin.
+2. Implementasi detail pesanan admin dan update status order.
+3. Integrasi pembayaran dan pembaruan status order.
+4. Tambah pagination storefront dan admin.
+5. Tambah invoice dan email konfirmasi order.

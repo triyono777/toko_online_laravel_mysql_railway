@@ -47,8 +47,36 @@
                 </div>
             </div>
 
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    @if ($product->is_active && $product->stock > 0)
+                        <form method="POST" action="{{ route('cart.items.store', $product) }}" class="row g-3 align-items-end">
+                            @csrf
+                            <div class="col-sm-4 col-lg-3">
+                                <label for="quantity" class="form-label">Jumlah</label>
+                                <input
+                                    id="quantity"
+                                    type="number"
+                                    name="quantity"
+                                    min="1"
+                                    max="{{ $product->stock }}"
+                                    value="{{ old('quantity', 1) }}"
+                                    class="form-control @error('quantity') is-invalid @enderror">
+                            </div>
+                            <div class="col-sm-8 col-lg-9 d-flex flex-wrap gap-3">
+                                <button type="submit" class="btn btn-primary btn-lg">Tambah ke Keranjang</button>
+                                <a href="{{ route('cart.index') }}" class="btn btn-outline-primary btn-lg">Lihat Keranjang</a>
+                            </div>
+                        </form>
+                    @else
+                        <div class="alert alert-warning mb-0">
+                            Produk ini belum bisa ditambahkan ke keranjang karena stok habis atau statusnya nonaktif.
+                        </div>
+                    @endif
+                </div>
+            </div>
+
             <div class="d-flex flex-wrap gap-3">
-                <a href="{{ route('cart.index') }}" class="btn btn-primary btn-lg">Tambah ke Keranjang</a>
                 <a href="{{ route('products.index') }}" class="btn btn-outline-primary btn-lg">Kembali ke Katalog</a>
             </div>
         </div>

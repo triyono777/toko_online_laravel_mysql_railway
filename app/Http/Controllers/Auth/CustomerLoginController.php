@@ -25,6 +25,7 @@ class CustomerLoginController extends Controller
             return $this->authenticatedRedirect();
         }
 
+        $previousSessionId = $request->session()->getId();
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required', 'string'],
@@ -37,6 +38,7 @@ class CustomerLoginController extends Controller
         }
 
         $request->session()->regenerate();
+        $request->session()->put('cart_session_id_before_login', $previousSessionId);
 
         if (Auth::user()->role !== 'customer') {
             Auth::logout();
