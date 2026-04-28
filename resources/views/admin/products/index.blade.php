@@ -9,7 +9,10 @@
             <h5 class="mb-0">Produk</h5>
             <small class="text-body-secondary">Manajemen katalog produk untuk toko online.</small>
         </div>
-        <a href="{{ route('products.index') }}" class="btn btn-sm btn-outline-primary">Lihat katalog publik</a>
+        <div class="d-flex gap-2">
+            <a href="{{ route('products.index') }}" class="btn btn-sm btn-outline-primary">Lihat katalog publik</a>
+            <a href="{{ route('admin.products.create') }}" class="btn btn-sm btn-primary">Tambah Produk</a>
+        </div>
     </div>
     <div class="table-responsive text-nowrap">
         <table class="table">
@@ -21,6 +24,8 @@
                     <th>Harga</th>
                     <th>Stok</th>
                     <th>Status</th>
+                    <th>Featured</th>
+                    <th class="text-end">Aksi</th>
                 </tr>
             </thead>
             <tbody class="table-border-bottom-0">
@@ -46,10 +51,25 @@
                                 {{ $product->is_active ? 'Aktif' : 'Nonaktif' }}
                             </span>
                         </td>
+                        <td>
+                            <span class="badge bg-label-{{ $product->featured ? 'warning' : 'secondary' }}">
+                                {{ $product->featured ? 'Ya' : 'Tidak' }}
+                            </span>
+                        </td>
+                        <td class="text-end">
+                            <div class="d-inline-flex gap-2">
+                                <a href="{{ route('admin.products.edit', $product) }}" class="btn btn-sm btn-outline-primary">Edit</a>
+                                <form method="POST" action="{{ route('admin.products.destroy', $product) }}" onsubmit="return confirm('Hapus produk ini?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">Hapus</button>
+                                </form>
+                            </div>
+                        </td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="6" class="text-center py-4 text-body-secondary">Belum ada produk. Jalankan seeder untuk melihat katalog awal.</td>
+                        <td colspan="8" class="text-center py-4 text-body-secondary">Belum ada produk. Tambahkan produk pertama untuk katalog publik.</td>
                     </tr>
                 @endforelse
             </tbody>

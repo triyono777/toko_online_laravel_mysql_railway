@@ -93,8 +93,8 @@ Dokumen ini merangkum task implementasi berdasarkan PRD dan status project Larav
 - [x] Listing produk
 - [x] Listing pesanan
 - [x] Listing pelanggan
-- [ ] CRUD kategori
-- [ ] CRUD produk
+- [x] CRUD kategori
+- [x] CRUD produk
 - [ ] Upload gambar produk
 - [ ] Manajemen stok dari admin
 - [ ] Detail pesanan admin
@@ -142,8 +142,8 @@ Dokumen ini merangkum task implementasi berdasarkan PRD dan status project Larav
 
 ## 13. Prioritas Berikutnya
 
-1. Implementasi CRUD kategori dan produk di admin.
-2. Implementasi detail pesanan admin dan update status order.
-3. Integrasi pembayaran dan pembaruan status order.
-4. Tambah pagination storefront dan admin.
-5. Tambah invoice dan email konfirmasi order.
+1. Implementasi detail pesanan admin dan update status order.
+2. Integrasi pembayaran dan pembaruan status order.
+3. Tambah pagination storefront dan admin.
+4. Tambah invoice dan email konfirmasi order.
+5. Implementasi upload gambar produk dan manajemen stok lanjutan.

@@ -51,8 +51,8 @@ Route::redirect('/admin', '/admin/dashboard');
 
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', AdminDashboardController::class)->name('dashboard');
-    Route::get('/categories', [AdminCategoryController::class, 'index'])->name('categories.index');
-    Route::get('/products', [AdminProductController::class, 'index'])->name('products.index');
+    Route::resource('categories', AdminCategoryController::class)->except('show');
+    Route::resource('products', AdminProductController::class)->except('show');
     Route::get('/orders', [AdminOrderController::class, 'index'])->name('orders.index');
     Route::get('/customers', [AdminCustomerController::class, 'index'])->name('customers.index');
 });
