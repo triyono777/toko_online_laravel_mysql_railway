@@ -1,0 +1,30 @@
+.storefront-header {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.hero-surface {
+  background:
+    radial-gradient(circle at top left, rgba(105, 108, 255, 0.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(3, 195, 236, 0.18), transparent 30%),
+    linear-gradient(135deg, #fff 0%, #f6f7fb 100%);
+  border: 1px solid rgba(105, 108, 255, 0.08);
+}
+
+.product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 2rem rgba(67, 89, 113, 0.12);
+}
+
+.product-cover {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.metric-card {
+  min-height: 100%;
+}

@@ -1,0 +1,31 @@
+<?php
+// Variables
+return [
+  "creatorName" => "Toko Online",
+  "creatorUrl" => "http://127.0.0.1:8000",
+  "templateName" => "Tokoonline",
+  "templateSuffix" => "Laravel Admin Panel",
+  "templateVersion" => "2.0.0",
+  "templateFree" => true,
+  "templateDescription" => "Aplikasi toko online berbasis Laravel dan MySQL dengan dashboard admin bertema Sneat.",
+  "templateKeyword" => "toko online, laravel, ecommerce, mysql, dashboard admin",
+  "licenseUrl" => "#",
+  "livePreview" => "http://127.0.0.1:8000",
+  "productPage" => "http://127.0.0.1:8000",
+  "support" => "#",
+  "adminTemplates" => "http://127.0.0.1:8000/admin/dashboard",
+  "bootstrapDashboard" => "http://127.0.0.1:8000/admin/products",
+  "ogTitle" => "Tokoonline Laravel Admin",
+  "ogImage" => "",
+  "ogType" => "website",
+  "documentation" => "#",
+  "repository" => "#",
+  "gitRepo" => "#",
+  "gitRepoAccess" => "#",
+  "githubFreeUrl" => "#",
+  "facebookUrl" => "#",
+  "twitterUrl" => "#",
+  "githubUrl" => "#",
+  "dribbbleUrl" => "#",
+  "instagramUrl" => "#"
+];

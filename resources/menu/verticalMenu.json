@@ -1,0 +1,66 @@
+{
+  "menu": [
+    {
+      "url": "admin/dashboard",
+      "name": "Dashboard",
+      "icon": "menu-icon icon-base bx bx-home-smile",
+      "slug": "admin.dashboard"
+    },
+    {
+      "menuHeader": "Katalog"
+    },
+    {
+      "name": "Manajemen Produk",
+      "icon": "menu-icon icon-base bx bx-package",
+      "slug": [
+        "admin.categories",
+        "admin.products"
+      ],
+      "submenu": [
+        {
+          "url": "admin/categories",
+          "name": "Kategori",
+          "slug": "admin.categories.index"
+        },
+        {
+          "url": "admin/products",
+          "name": "Produk",
+          "slug": "admin.products.index"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Penjualan"
+    },
+    {
+      "url": "admin/orders",
+      "name": "Pesanan",
+      "icon": "menu-icon icon-base bx bx-receipt",
+      "slug": "admin.orders"
+    },
+    {
+      "menuHeader": "Pelanggan"
+    },
+    {
+      "url": "admin/customers",
+      "name": "Pelanggan",
+      "icon": "menu-icon icon-base bx bx-user-circle",
+      "slug": "admin.customers"
+    },
+    {
+      "menuHeader": "Navigasi Cepat"
+    },
+    {
+      "url": "/",
+      "name": "Storefront",
+      "icon": "menu-icon icon-base bx bx-store",
+      "slug": "home"
+    },
+    {
+      "url": "products",
+      "name": "Katalog Publik",
+      "icon": "menu-icon icon-base bx bx-grid-alt",
+      "slug": "products"
+    }
+  ]
+}
