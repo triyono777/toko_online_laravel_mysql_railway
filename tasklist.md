@@ -77,14 +77,14 @@ Dokumen ini merangkum task implementasi berdasarkan PRD dan status project Larav
 
 ## 7. Autentikasi dan Otorisasi
 
-- [ ] Implementasi login customer
-- [ ] Implementasi registrasi customer
-- [ ] Implementasi logout customer
-- [ ] Implementasi reset password
-- [ ] Implementasi login admin
+- [x] Implementasi login customer
+- [x] Implementasi registrasi customer
+- [x] Implementasi logout customer
+- [x] Implementasi reset password
+- [x] Implementasi login admin
 - [ ] Pisahkan middleware admin dan customer
-- [ ] Lindungi route admin
-- [ ] Batasi akses CRUD hanya untuk admin
+- [x] Lindungi route admin
+- [x] Batasi akses CRUD hanya untuk admin
 
 ## 8. Admin Panel
 
@@ -108,7 +108,7 @@ Dokumen ini merangkum task implementasi berdasarkan PRD dan status project Larav
 - [x] Ganti menu demo menjadi menu toko online
 - [ ] Rapikan copywriting demo yang masih generik
 - [ ] Tambah empty state yang lebih baik
-- [ ] Tambah flash message sukses/gagal
+- [x] Tambah flash message sukses/gagal
 - [ ] Tambah pagination pada listing admin dan katalog
 - [ ] Optimasi mobile layout untuk checkout dan admin
 
@@ -126,10 +126,10 @@ Dokumen ini merangkum task implementasi berdasarkan PRD dan status project Larav
 
 - [x] Smoke test default Laravel lulus
 - [ ] Tambah feature test storefront
-- [ ] Tambah feature test admin
+- [x] Tambah feature test admin
 - [ ] Tambah test checkout
 - [ ] Tambah test migration/schema penting
-- [ ] Tambah test otorisasi admin/customer
+- [x] Tambah test otorisasi admin/customer
 
 ## 12. Cleanup Teknis
 

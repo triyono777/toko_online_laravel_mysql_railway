@@ -1,6 +1,6 @@
 @extends('layouts/blankLayout')
 
-@section('title', 'Login Basic - Pages')
+@section('title', 'Masuk Pelanggan')
 
 @section('page-style')
 @vite(['resources/assets/vendor/scss/pages/page-auth.scss'])
@@ -21,13 +21,14 @@
                         </a>
                     </div>
                     <!-- /Logo -->
-                    <h4 class="mb-1">Welcome to {{ config('variables.templateName') }}! 👋</h4>
-                    <p class="mb-6">Please sign-in to your account and start the adventure</p>
+                    <h4 class="mb-1">Masuk ke akun pelanggan</h4>
+                    <p class="mb-6">Gunakan akun pelanggan Anda untuk melihat katalog dan melanjutkan checkout.</p>
 
-                    <form id="formAuthentication" class="mb-6" action="{{ url('/') }}" method="GET">
+                    <form id="formAuthentication" class="mb-6" action="{{ route('login.store') }}" method="POST">
+                        @csrf
                         <div class="mb-6">
-                            <label for="email" class="form-label">Email or Username</label>
-                            <input type="text" class="form-control" id="email" name="email-username" placeholder="Enter your email or username" autofocus />
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="Masukkan email Anda" autofocus />
                         </div>
                         <div class="mb-6 form-password-toggle">
                             <label class="form-label" for="password">Password</label>
@@ -39,10 +40,10 @@
                         <div class="mb-8">
                             <div class="d-flex justify-content-between">
                                 <div class="form-check mb-0">
-                                    <input class="form-check-input" type="checkbox" id="remember-me" />
+                                    <input class="form-check-input" type="checkbox" id="remember-me" name="remember" value="1" />
                                     <label class="form-check-label" for="remember-me"> Remember Me </label>
                                 </div>
-                                <a href="{{ url('auth/forgot-password-basic') }}">
+                                <a href="{{ route('password.request') }}">
                                     <span>Forgot Password?</span>
                                 </a>
                             </div>
@@ -54,9 +55,12 @@
 
                     <p class="text-center">
                         <span>New on our platform?</span>
-                        <a href="{{ url('auth/register-basic') }}">
+                        <a href="{{ route('register') }}">
                             <span>Create an account</span>
                         </a>
+                    </p>
+                    <p class="text-center mb-0">
+                        <a href="{{ route('admin.login') }}" class="small">Masuk sebagai admin</a>
                     </p>
                 </div>
             </div>

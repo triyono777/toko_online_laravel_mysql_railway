@@ -48,8 +48,8 @@
                                 </div>
                             </div>
                             <div class="flex-grow-1">
-                                <h6 class="mb-0">Store Admin</h6>
-                                <small class="text-muted">Tokoonline Panel</small>
+                                <h6 class="mb-0">{{ auth()->user()?->name ?? 'Store Admin' }}</h6>
+                                <small class="text-muted">{{ strtoupper(auth()->user()?->role ?? 'admin') }}</small>
                             </div>
                         </div>
                     </a>
@@ -76,9 +76,12 @@
                     <div class="dropdown-divider my-1"></div>
                 </li>
                 <li>
-                    <a class="dropdown-item" href="{{ route('home') }}">
-                        <i class="icon-base bx bx-store icon-md me-3"></i><span>Kembali ke Toko</span>
-                    </a>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="dropdown-item">
+                            <i class="icon-base bx bx-power-off icon-md me-3"></i><span>Logout</span>
+                        </button>
+                    </form>
                 </li>
             </ul>
         </li>

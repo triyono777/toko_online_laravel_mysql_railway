@@ -12,7 +12,20 @@
                 <nav class="d-flex align-items-center gap-3 gap-md-4">
                     <a href="{{ route('home') }}" class="text-body">Beranda</a>
                     <a href="{{ route('products.index') }}" class="text-body">Produk</a>
-                    <a href="{{ route('admin.dashboard') }}" class="text-body">Admin</a>
+                    @auth
+                        @if (auth()->user()->role === 'admin')
+                            <a href="{{ route('admin.dashboard') }}" class="text-body">Admin</a>
+                        @endif
+                        <span class="text-body-secondary small">Halo, {{ auth()->user()->name }}</span>
+                        <form method="POST" action="{{ route('logout') }}" class="d-inline">
+                            @csrf
+                            <button type="submit" class="btn btn-outline-secondary btn-sm">Logout</button>
+                        </form>
+                    @else
+                        <a href="{{ route('login') }}" class="text-body">Masuk</a>
+                        <a href="{{ route('register') }}" class="text-body">Daftar</a>
+                        <a href="{{ route('admin.login') }}" class="text-body">Admin</a>
+                    @endauth
                     <a href="{{ route('cart.index') }}" class="btn btn-primary btn-sm">Keranjang</a>
                 </nav>
             </div>
@@ -20,6 +33,9 @@
     </header>
 
     <main class="flex-grow-1">
+        <div class="container-xxl pt-4">
+            @include('_partials.flash-messages')
+        </div>
         @yield('content')
     </main>
 
