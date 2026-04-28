@@ -6,6 +6,7 @@ Dokumen ini mendefinisikan kebutuhan produk untuk aplikasi toko online yang menj
 
 - backend: `Laravel`
 - database: `MySQL`
+- database development saat ini: `tokoonline_db` pada MySQL dari `XAMPP`
 
 Asumsi dasar:
 
@@ -236,10 +237,13 @@ Produk ini ditujukan untuk menyediakan kanal penjualan mandiri yang:
 
 - backend wajib menggunakan Laravel
 - database relasional utama wajib menggunakan MySQL
+- environment database lokal saat ini menggunakan MySQL dari XAMPP
+- nama database development yang dipakai saat ini adalah `tokoonline_db`
 - autentikasi menggunakan mekanisme Laravel yang standar dan maintainable
 - migrasi database harus dikelola melalui Laravel migrations
 - operasi background seperti email dan notifikasi sebaiknya memakai Laravel queue
 - seluruh akses database aplikasi dilakukan melalui layer Laravel, bukan query manual yang tersebar tanpa kontrol
+- detail koneksi seperti `DB_HOST`, `DB_PORT`, `DB_USERNAME`, dan `DB_PASSWORD` harus dikelola melalui file `.env` sesuai instalasi XAMPP lokal
 
 ## 13. Kebutuhan Data Inti
 
@@ -336,6 +340,7 @@ Catatan desain awal:
 
 - backend: Laravel dengan Blade untuk storefront dan dashboard admin
 - database: MySQL 8+
+- database lokal awal: `tokoonline_db` di MySQL XAMPP
 - admin UI: Laravel Blade dengan admin theme bila dibutuhkan
 - pembayaran: gateway lokal yang mendukung VA dan e-wallet
 - deployment awal: single Laravel app dengan queue untuk email dan notifikasi
