@@ -39,33 +39,53 @@ Project ini adalah aplikasi toko online berbasis Laravel 12, MySQL, dan tema Sne
   - Email: `customer@tokoonline.test`
   - Password: `password`
 
+## Clone Repository
+
+Repository GitHub project ini:
+
+- [https://github.com/triyono777/toko_online_laravel_mysql_railway](https://github.com/triyono777/toko_online_laravel_mysql_railway)
+
+Clone project lalu masuk ke folder kerja:
+
+```bash
+git clone https://github.com/triyono777/toko_online_laravel_mysql_railway.git
+cd toko_online_laravel_mysql_railway
+```
+
 ## Menjalankan Lokal
 
-1. Install dependency backend.
+1. Clone repository lalu masuk ke folder project.
+
+```bash
+git clone https://github.com/triyono777/toko_online_laravel_mysql_railway.git
+cd toko_online_laravel_mysql_railway
+```
+
+2. Install dependency backend.
 
 ```bash
 composer install
 ```
 
-2. Install dependency frontend.
+3. Install dependency frontend.
 
 ```bash
 npm install
 ```
 
-3. Buat file environment dari contoh.
+4. Buat file environment dari contoh.
 
 ```bash
 cp .env.example .env
 ```
 
-4. Generate app key.
+5. Generate app key.
 
 ```bash
 php artisan key:generate
 ```
 
-5. Sesuaikan koneksi database lokal XAMPP di `.env`.
+6. Sesuaikan koneksi database lokal XAMPP di `.env`.
 
 ```env
 DB_CONNECTION=mysql
@@ -76,19 +96,19 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-6. Jalankan migrasi dan seeder.
+7. Jalankan migrasi dan seeder.
 
 ```bash
 php artisan migrate --seed
 ```
 
-7. Build asset frontend.
+8. Build asset frontend.
 
 ```bash
 npm run build
 ```
 
-8. Jalankan aplikasi.
+9. Jalankan aplikasi.
 
 ```bash
 php artisan serve
