@@ -11,6 +11,12 @@ Project ini adalah aplikasi toko online berbasis Laravel 12, MySQL, dan tema Sne
 - Sneat admin theme
 - Railway CLI untuk deployment
 
+## Sumber Template
+
+- Template dasar admin yang dipakai di project ini berasal dari Sneat HTML Free:
+  [https://github.com/themeselection/sneat-bootstrap-html-admin-template-free](https://github.com/themeselection/sneat-bootstrap-html-admin-template-free)
+- Integrasi Laravel pada project ini kemudian disesuaikan lagi untuk kebutuhan toko online, termasuk storefront, autentikasi, cart, checkout, dan admin CRUD.
+
 ## Fitur Saat Ini
 
 - Storefront: beranda, katalog, detail produk
