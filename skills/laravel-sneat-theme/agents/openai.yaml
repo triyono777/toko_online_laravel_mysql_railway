@@ -1,0 +1,7 @@
+interface:
+  display_name: "Laravel Sneat Theme"
+  short_description: "Apply local Sneat Blade admin theme"
+  default_prompt: "Use $laravel-sneat-theme to adapt this Laravel app to the local Sneat admin template."
+
+policy:
+  allow_implicit_invocation: true
