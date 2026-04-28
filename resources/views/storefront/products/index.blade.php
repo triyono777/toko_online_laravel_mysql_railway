@@ -7,7 +7,7 @@
     <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3 mb-4">
         <div>
             <h1 class="mb-1">Katalog Produk</h1>
-            <p class="text-body-secondary mb-0">Daftar produk aktif untuk MVP toko online.</p>
+            <p class="text-body-secondary mb-0">Temukan produk terbaik untuk kebutuhan Anda dalam satu katalog yang rapi dan mudah dijelajahi.</p>
         </div>
         <form method="GET" action="{{ route('products.index') }}" class="row g-2">
             <div class="col-12 col-md-auto">

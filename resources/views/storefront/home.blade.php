@@ -7,14 +7,14 @@
     <div class="hero-surface rounded-4 p-4 p-lg-5 mb-5">
         <div class="row align-items-center g-4">
             <div class="col-lg-7">
-                <span class="badge bg-label-primary mb-3">MVP Storefront</span>
-                <h1 class="display-5 fw-bold mb-3">Toko online Laravel siap dikembangkan dari PRD ke implementasi.</h1>
+                <span class="badge bg-label-primary mb-3">Belanja Online</span>
+                <h1 class="display-5 fw-bold mb-3">Temukan produk pilihan untuk kebutuhan harian Anda.</h1>
                 <p class="fs-5 text-body-secondary mb-4">
-                    Fondasi aplikasi sudah memakai tema Sneat untuk admin panel, MySQL `tokoonline_db`, dan struktur domain awal untuk katalog, pesanan, pembayaran, serta pengiriman.
+                    Nikmati pengalaman belanja yang cepat, nyaman, dan rapi dengan katalog terkurasi, checkout praktis, dan layanan yang siap mendukung aktivitas belanja Anda.
                 </p>
                 <div class="d-flex flex-wrap gap-3">
-                    <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg">Lihat Katalog</a>
-                    <a href="{{ route('admin.dashboard') }}" class="btn btn-outline-primary btn-lg">Buka Dashboard</a>
+                    <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg">Belanja Sekarang</a>
+                    <a href="{{ route('cart.index') }}" class="btn btn-outline-primary btn-lg">Lihat Keranjang</a>
                 </div>
             </div>
             <div class="col-lg-5">
@@ -38,12 +38,12 @@
                     <div class="col-12">
                         <div class="card shadow-none border bg-white">
                             <div class="card-body">
-                                <p class="mb-2 fw-semibold">Apa yang sudah aktif</p>
+                                <p class="mb-2 fw-semibold">Keunggulan layanan</p>
                                 <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge bg-label-success">Katalog</span>
-                                    <span class="badge bg-label-success">Dashboard Admin</span>
-                                    <span class="badge bg-label-info">Schema MySQL</span>
-                                    <span class="badge bg-label-info">Seeder Demo</span>
+                                    <span class="badge bg-label-success">Produk Pilihan</span>
+                                    <span class="badge bg-label-success">Checkout Cepat</span>
+                                    <span class="badge bg-label-info">Pembayaran Mudah</span>
+                                    <span class="badge bg-label-info">Pengiriman Terjadwal</span>
                                 </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
     <div class="d-flex align-items-center justify-content-between mb-4">
         <div>
             <h2 class="mb-1">Kategori utama</h2>
-            <p class="text-body-secondary mb-0">Siap dipakai untuk pengelompokan katalog awal.</p>
+            <p class="text-body-secondary mb-0">Pilih kategori untuk menemukan produk yang paling sesuai dengan kebutuhan Anda.</p>
         </div>
         <a href="{{ route('products.index') }}" class="btn btn-sm btn-outline-primary">Lihat semua produk</a>
     </div>
@@ -73,7 +73,7 @@
             </div>
         @empty
             <div class="col-12">
-                <div class="alert alert-warning mb-0">Kategori belum tersedia. Jalankan migrasi dan seeder untuk memuat data awal.</div>
+                <div class="alert alert-warning mb-0">Kategori belum tersedia saat ini. Silakan cek kembali dalam beberapa saat.</div>
             </div>
         @endforelse
     </div>
@@ -81,7 +81,7 @@
     <div class="d-flex align-items-center justify-content-between mb-4">
         <div>
             <h2 class="mb-1">Produk terbaru</h2>
-            <p class="text-body-secondary mb-0">Contoh produk awal dari seeder aplikasi.</p>
+            <p class="text-body-secondary mb-0">Produk terbaru yang siap Anda lihat dan pesan hari ini.</p>
         </div>
     </div>
     <div class="row g-4">
@@ -105,7 +105,7 @@
             </div>
         @empty
             <div class="col-12">
-                <div class="alert alert-warning mb-0">Produk belum tersedia. Seeder akan mengisi produk contoh setelah database siap.</div>
+                <div class="alert alert-warning mb-0">Produk belum tersedia saat ini. Silakan cek kembali dalam beberapa saat.</div>
             </div>
         @endforelse
     </div>
