@@ -11,6 +11,10 @@ Project ini adalah aplikasi toko online berbasis Laravel 12, MySQL, dan tema Sne
 - Sneat admin theme
 - Railway CLI untuk deployment
 
+## Demo Domain
+
+- Demo Railway: [https://web-production-b59ff6.up.railway.app/](https://web-production-b59ff6.up.railway.app/)
+
 ## Sumber Template
 
 - Template dasar admin yang dipakai di project ini berasal dari Sneat HTML Free:
